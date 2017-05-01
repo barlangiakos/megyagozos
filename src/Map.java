@@ -255,7 +255,6 @@ public class Map {
 		
 		Rail r15 = new Rail("r15");
 		r15.setRail1(sw3);
-		sw3.addRail(r15);
 		RailView vr15 = new RailView(766, 290, 24, 80);
 		vr15.setImage("img/rail2.jpg");
 		r15.setView(vr15);
@@ -266,6 +265,7 @@ public class Map {
 		r16.setRail1(sw3);
 		sw3.setRail2(r16);
 		sw3.addRail(r16);
+		sw3.addRail(r15);
 		ts1.setRail1(r16);
 		r16.setRail2(ts1);
 		RailView vr16 = new RailView(790, 210, 80, 24);
@@ -291,6 +291,24 @@ public class Map {
 		r18.setView(vr18);
 		vr18.setModel(r18);
 		rails.add(r18);
+		
+		Rail r19 = new Rail("r19");
+		r19.setRail1(r18);
+		r18.setRail2(r19);
+		RailView vr19 = new RailView(1110, 234, 24, 80);
+		vr19.setImage("img/rail2.jpg");
+		r19.setView(vr19);
+		vr19.setModel(r19);
+		rails.add(r19);
+		
+		Rail r20 = new Rail("r20");
+		r20.setRail1(r19);
+		r19.setRail2(r20);
+		RailView vr20 = new RailView(1110, 314, 24, 80);
+		vr20.setImage("img/rail2.jpg");
+		r20.setView(vr20);
+		vr20.setModel(r20);
+		rails.add(r20);
 
 		
 		Controller.getController().addElement(vEp);
@@ -319,6 +337,8 @@ public class Map {
 		Controller.getController().addElement(vr16);
 		Controller.getController().addElement(vr17);
 		Controller.getController().addElement(vr18);
+		Controller.getController().addElement(vr19);
+		Controller.getController().addElement(vr20);
 	}
 	
 	/**
