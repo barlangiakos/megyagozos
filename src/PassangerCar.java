@@ -74,12 +74,12 @@ public class PassangerCar extends Wagon {
 			currentRail = nextRail;
 			int nextX = nextRail.getView().getX();
 			int nextY = nextRail.getView().getY();
-			pcView.setX(nextX);
-			pcView.setY(nextY);
 			
 			currentRail.enter(this);
 			System.out.println(id + " moved to " + currentRail.getId() + ".");
 			currentRail.getOff(color);
+			pcView.setX(nextX);
+			pcView.setY(nextY);
 			if (rear != null && !entering) rear.move(); 
 			else entering = false;
 		}
@@ -101,7 +101,6 @@ public class PassangerCar extends Wagon {
 		if (!b){
 			pcView.setImage("img/" + color + "pc.jpg");
 		}
-		else pcView.setImage("emptypc.jpg");
 	}
 	
 	public String getColor(){
