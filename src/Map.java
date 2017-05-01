@@ -247,10 +247,7 @@ public class Map {
 		switches.add(sw3);
 		
 		TunnelSpace ts1 = new TunnelSpace("ts1");
-		ts1.setRail1(sw3);
-		sw3.setRail2(ts1);
-		sw3.addRail(ts1);
-		TunnelSpaceView vts1 = new TunnelSpaceView(790,210,80,24);
+		TunnelSpaceView vts1 = new TunnelSpaceView(870,210,80,24);
 		vts1.setImage("img/tsNotBuilt.jpg");
 		ts1.setView(vts1);
 		vts1.setModel(ts1);
@@ -258,12 +255,42 @@ public class Map {
 		
 		Rail r15 = new Rail("r15");
 		r15.setRail1(sw3);
-		sw3.addRail(r15);;
+		sw3.addRail(r15);
 		RailView vr15 = new RailView(766, 290, 24, 80);
 		vr15.setImage("img/rail2.jpg");
 		r15.setView(vr15);
 		vr15.setModel(r15);
 		rails.add(r15);
+		
+		Rail r16 = new Rail("r16");
+		r16.setRail1(sw3);
+		sw3.setRail2(r16);
+		sw3.addRail(r16);
+		ts1.setRail1(r16);
+		r16.setRail2(ts1);
+		RailView vr16 = new RailView(790, 210, 80, 24);
+		vr16.setImage("img/rail.jpg");
+		r16.setView(vr16);
+		vr16.setModel(r16);
+		rails.add(r16);
+		
+		Rail r17 = new Rail("r17");
+		r17.setRail1(ts1);
+		ts1.setRail2(r17);
+		RailView vr17 = new RailView(950, 210, 80, 24);
+		vr17.setImage("img/rail.jpg");
+		r17.setView(vr17);
+		vr17.setModel(r17);
+		rails.add(r17);
+		
+		Rail r18 = new Rail("r18");
+		r18.setRail1(r17);
+		r17.setRail2(r18);
+		RailView vr18 = new RailView(1030, 210, 80, 24);
+		vr18.setImage("img/rail.jpg");
+		r18.setView(vr18);
+		vr18.setModel(r18);
+		rails.add(r18);
 
 		
 		Controller.getController().addElement(vEp);
@@ -289,6 +316,9 @@ public class Map {
 		Controller.getController().addElement(vsw3);
 		Controller.getController().addElement(vts1);
 		Controller.getController().addElement(vr15);
+		Controller.getController().addElement(vr16);
+		Controller.getController().addElement(vr17);
+		Controller.getController().addElement(vr18);
 	}
 	
 	/**
