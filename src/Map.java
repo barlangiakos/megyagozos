@@ -91,21 +91,21 @@ public class Map {
 		rails.add(r2);
 		
 		Rail r3 = new Rail("r3");
-		RailView vr3 = new RailView(320, 74, 24, 80);
+		RailView vr3 = new RailView(320, 50, 24, 80);
 		vr3.setImage("img/rail2.jpg");
 		r3.setView(vr3);
 		vr3.setModel(r3);
 		rails.add(r3);
 		
 		Rail r4 = new Rail("r4");
-		RailView vr4 = new RailView(320, 234, 24, 80);
+		RailView vr4 = new RailView(320, 210, 24, 80);
 		vr4.setImage("img/rail2.jpg");
 		r4.setView(vr4);
 		vr4.setModel(r4);
 		rails.add(r4);
 		
 		Rail r5 = new Rail("r5");
-		RailView vr5 = new RailView(210, 344, 80, 24);
+		RailView vr5 = new RailView(210, 320, 80, 24);
 		vr5.setImage("img/rail.jpg");
 		r5.setView(vr5);
 		vr5.setModel(r5);
@@ -115,7 +115,7 @@ public class Map {
 		cr1.setRail1(r5);
 		cr1.setRail3(r4);
 		r4.setRail2(cr1);
-		RailView vcr1 = new RailView(290, 314, 80, 80);
+		RailView vcr1 = new RailView(290, 290, 80, 80);
 		vcr1.setImage("img/cr.jpg");
 		cr1.setView(vcr1);
 		vcr1.setModel(cr1);
@@ -124,7 +124,7 @@ public class Map {
 		Rail r6 = new Rail("r6");
 		r6.setRail1(cr1);
 		cr1.setRail2(r6);
-		RailView vr6 = new RailView(370, 344, 80, 24);
+		RailView vr6 = new RailView(370, 290, 80, 24);
 		vr6.setImage("img/rail.jpg");
 		r6.setView(vr6);
 		vr6.setModel(r6);
@@ -133,7 +133,7 @@ public class Map {
 		Rail r7 = new Rail("r7");
 		r7.setRail1(cr1);
 		cr1.setRail4(r7);
-		RailView vr7 = new RailView(320, 394, 24, 80);
+		RailView vr7 = new RailView(320, 370, 24, 80);
 		vr7.setImage("img/rail2.jpg");
 		r7.setView(vr7);
 		vr7.setModel(r7);
@@ -151,19 +151,19 @@ public class Map {
 		rails.add(r8);
 		
 		Switch sw1 = new Switch("sw1");
-		sw1.setRail1(r3);
-		sw1.setRail2(r4);
+		sw1.setRail1(r4);
+		sw1.setRail2(r3);
 		r3.setRail2(sw1);
 		r4.setRail1(sw1);
-		sw1.addRail(r4);
-		SwitchView vsw1 = new SwitchView(310, 154, 80, 80, sw1, "img/switch42.jpg", "img/switch41.jpg");
+		sw1.addRail(r3);
+		SwitchView vsw1 = new SwitchView(320, 130, 80, 80, sw1, "img/switch52.jpg", "img/switch51.jpg");
 		sw1.setView(vsw1);
 		switches.add(sw1);
 		
 		Rail r9 = new Rail("r9");
 		r9.setRail1(sw1);
 		sw1.addRail(r9);
-		RailView vr9 = new RailView(390, 210, 80, 24);
+		RailView vr9 = new RailView(400, 130, 80, 24);
 		vr9.setImage("img/rail.jpg");
 		r9.setView(vr9);
 		vr9.setModel(r9);
@@ -208,7 +208,7 @@ public class Map {
 		Rail r12 = new Rail("r12");
 		r12.setRail1(r9);
 		r9.setRail2(r12);
-		RailView vr12 = new RailView(470, 210, 80, 24);
+		RailView vr12 = new RailView(480, 130, 80, 24);
 		vr12.setImage("img/rail.jpg");
 		r12.setView(vr12);
 		vr12.setModel(r12);
@@ -217,7 +217,7 @@ public class Map {
 		Rail r13 = new Rail("r13");
 		r13.setRail1(r12);
 		r12.setRail2(r13);
-		RailView vr13 = new RailView(550, 210, 80, 24);
+		RailView vr13 = new RailView(560, 130, 80, 24);
 		vr13.setImage("img/rail.jpg");
 		r13.setView(vr13);
 		vr13.setModel(r13);
@@ -226,7 +226,7 @@ public class Map {
 		Rail r14 = new Rail("r14");
 		r14.setRail1(r13);
 		r13.setRail2(r14);
-		RailView vr14 = new RailView(630, 210, 80, 24);
+		RailView vr14 = new RailView(640, 130, 80, 24);
 		vr14.setImage("img/rail.jpg");
 		r14.setView(vr14);
 		vr14.setModel(r14);
@@ -234,7 +234,7 @@ public class Map {
 		
 		OffStation offgreen = new OffStation("offgreen", "green");
 		r12.setStation(offgreen);
-		StationView voffgreen = new StationView(470,186,80,23);
+		StationView voffgreen = new StationView(480,106,80,23);
 		voffgreen.setImage("img/greenstation.jpg");
 		offgreen.setView(voffgreen);
 		offStations.add(offgreen);
@@ -242,12 +242,12 @@ public class Map {
 		Switch sw3 = new Switch("sw3");
 		sw3.setRail1(r14);
 		r14.setRail2(sw3);
-		SwitchView vsw3 = new SwitchView(710, 210, 80, 80, sw3, "img/switch82.jpg", "img/switch81.jpg");
+		SwitchView vsw3 = new SwitchView(720, 130, 80, 80, sw3, "img/switch82.jpg", "img/switch81.jpg");
 		sw3.setView(vsw3);
 		switches.add(sw3);
 		
 		TunnelSpace ts1 = new TunnelSpace("ts1");
-		TunnelSpaceView vts1 = new TunnelSpaceView(870,210,80,24);
+		TunnelSpaceView vts1 = new TunnelSpaceView(880,130,80,24);
 		vts1.setImage("img/tsNotBuilt.jpg");
 		ts1.setView(vts1);
 		vts1.setModel(ts1);
@@ -255,7 +255,7 @@ public class Map {
 		
 		Rail r15 = new Rail("r15");
 		r15.setRail1(sw3);
-		RailView vr15 = new RailView(766, 290, 24, 80);
+		RailView vr15 = new RailView(776, 210, 24, 80);
 		vr15.setImage("img/rail2.jpg");
 		r15.setView(vr15);
 		vr15.setModel(r15);
@@ -268,7 +268,7 @@ public class Map {
 		sw3.addRail(r15);
 		ts1.setRail1(r16);
 		r16.setRail2(ts1);
-		RailView vr16 = new RailView(790, 210, 80, 24);
+		RailView vr16 = new RailView(800, 130, 80, 24);
 		vr16.setImage("img/rail.jpg");
 		r16.setView(vr16);
 		vr16.setModel(r16);
@@ -277,7 +277,7 @@ public class Map {
 		Rail r17 = new Rail("r17");
 		r17.setRail1(ts1);
 		ts1.setRail2(r17);
-		RailView vr17 = new RailView(950, 210, 80, 24);
+		RailView vr17 = new RailView(960, 130, 80, 24);
 		vr17.setImage("img/rail.jpg");
 		r17.setView(vr17);
 		vr17.setModel(r17);
@@ -286,7 +286,7 @@ public class Map {
 		Rail r18 = new Rail("r18");
 		r18.setRail1(r17);
 		r17.setRail2(r18);
-		RailView vr18 = new RailView(1030, 210, 80, 24);
+		RailView vr18 = new RailView(1040, 130, 80, 24);
 		vr18.setImage("img/rail.jpg");
 		r18.setView(vr18);
 		vr18.setModel(r18);
@@ -295,7 +295,7 @@ public class Map {
 		Rail r19 = new Rail("r19");
 		r19.setRail1(r18);
 		r18.setRail2(r19);
-		RailView vr19 = new RailView(1110, 234, 24, 80);
+		RailView vr19 = new RailView(1120, 154, 24, 80);
 		vr19.setImage("img/rail2.jpg");
 		r19.setView(vr19);
 		vr19.setModel(r19);
@@ -304,11 +304,166 @@ public class Map {
 		Rail r20 = new Rail("r20");
 		r20.setRail1(r19);
 		r19.setRail2(r20);
-		RailView vr20 = new RailView(1110, 314, 24, 80);
+		RailView vr20 = new RailView(1120, 234, 24, 80);
 		vr20.setImage("img/rail2.jpg");
 		r20.setView(vr20);
 		vr20.setModel(r20);
 		rails.add(r20);
+		
+		Switch sw4 = new Switch("sw4");
+		sw4.setRail1(r20);
+		r20.setRail2(sw4);
+		SwitchView vsw4 = new SwitchView(1064, 314, 80, 80, sw4, "img/switch62.jpg", "img/switch61.jpg");
+		sw4.setView(vsw4);
+		switches.add(sw4);
+		
+		Rail r21 = new Rail("r21");
+		r21.setRail1(sw4);
+		sw4.setRail2(r21);
+		sw4.addRail(r21);
+		RailView vr21 = new RailView(1120, 394, 24, 80);
+		vr21.setImage("img/rail2.jpg");
+		r21.setView(vr21);
+		vr21.setModel(r21);
+		rails.add(r21);
+		
+		Rail r22 = new Rail("r22");
+		r22.setRail1(sw4);
+		sw4.addRail(r22);
+		RailView vr22 = new RailView(984, 370, 80, 24);
+		vr22.setImage("img/rail.jpg");
+		r22.setView(vr22);
+		vr22.setModel(r22);
+		rails.add(r22);
+		
+		Rail r23 = new Rail("r23");
+		r23.setRail1(r22);
+		r22.setRail2(r23);
+		RailView vr23 = new RailView(904, 370, 80, 24);
+		vr23.setImage("img/rail.jpg");
+		r23.setView(vr23);
+		vr23.setModel(r23);
+		rails.add(r23);
+		
+		Rail r24 = new Rail("r24");
+		r24.setRail1(r23);
+		r23.setRail2(r24);
+		RailView vr24 = new RailView(824, 370, 80, 24);
+		vr24.setImage("img/rail.jpg");
+		r24.setView(vr24);
+		vr24.setModel(r24);
+		rails.add(r24);
+		
+		CrossRail cr2 = new CrossRail("cr2");
+		cr2.setRail2(r24);
+		r24.setRail2(cr2);
+		RailView vcr2 = new RailView(744, 370, 80, 80);
+		vcr2.setImage("img/cr.jpg");
+		cr2.setView(vcr2);
+		vcr2.setModel(cr2);
+		crossRails.add(cr2);
+		
+		Rail r25 = new Rail("r25");
+		r25.setRail1(r15);
+		r15.setRail2(r25);
+		r25.setRail2(cr2);
+		cr2.setRail3(r25);
+		RailView vr25 = new RailView(776, 290, 24, 80);
+		vr25.setImage("img/rail2.jpg");
+		r25.setView(vr25);
+		vr25.setModel(r25);
+		rails.add(r25);
+		
+		Rail r26 = new Rail("r26");
+		r26.setRail1(r6);
+		r6.setRail2(r26);
+		RailView vr26 = new RailView(450, 290, 80, 24);
+		vr26.setImage("img/rail.jpg");
+		r26.setView(vr26);
+		vr26.setModel(r26);
+		rails.add(r26);
+		
+		Rail r27 = new Rail("r27");
+		r27.setRail1(r26);
+		r26.setRail2(r27);
+		RailView vr27 = new RailView(530, 290, 80, 24);
+		vr27.setImage("img/rail.jpg");
+		r27.setView(vr27);
+		vr27.setModel(r27);
+		rails.add(r27);
+		
+		Rail r28 = new Rail("r28");
+		r28.setRail1(r27);
+		r27.setRail2(r28);
+		RailView vr28 = new RailView(586, 314, 24, 80);
+		vr28.setImage("img/rail2.jpg");
+		r28.setView(vr28);
+		vr28.setModel(r28);
+		rails.add(r28);
+		
+		Rail r29 = new Rail("r29");
+		r29.setRail1(cr2);
+		cr2.setRail1(r29);
+		RailView vr29 = new RailView(664, 394, 80, 24);
+		vr29.setImage("img/rail.jpg");
+		r29.setView(vr29);
+		vr29.setModel(r29);
+		rails.add(r29);
+		
+		Switch sw5 = new Switch("sw5");
+		sw5.setRail2(r28);
+		r28.setRail2(sw5);
+		sw5.addRail(r28);
+		sw5.addRail(r29);
+		SwitchView vsw5 = new SwitchView(586, 394, 80, 80, sw5, "img/switch52.jpg", "img/switch51.jpg");
+		sw5.setView(vsw5);
+		switches.add(sw5);
+		
+		Rail r30 = new Rail("r30");
+		r30.setRail1(sw5);
+		sw5.setRail1(r30);
+		RailView vr30 = new RailView(586, 474, 24, 80);
+		vr30.setImage("img/rail2.jpg");
+		r30.setView(vr30);
+		vr30.setModel(r30);
+		rails.add(r30);
+		
+		Rail r31 = new Rail("r31");
+		r31.setRail1(r30);
+		r30.setRail2(r31);
+		RailView vr31 = new RailView(506, 530, 80, 24);
+		vr31.setImage("img/rail.jpg");
+		r31.setView(vr31);
+		vr31.setModel(r31);
+		rails.add(r31);
+		
+		Rail r32 = new Rail("r32");
+		r32.setRail1(r31);
+		r31.setRail2(r32);
+		RailView vr32 = new RailView(426, 530, 80, 24);
+		vr32.setImage("img/rail.jpg");
+		r32.setView(vr32);
+		vr32.setModel(r32);
+		rails.add(r32);
+		
+		Rail r33 = new Rail("r33");
+		r33.setRail1(r32);
+		r32.setRail2(r33);
+		RailView vr33 = new RailView(346, 530, 80, 24);
+		vr33.setImage("img/rail.jpg");
+		r33.setView(vr33);
+		vr33.setModel(r33);
+		rails.add(r33);
+		
+		Rail r34 = new Rail("r34");
+		r34.setRail1(r33);
+		r33.setRail2(r34);
+		r7.setRail2(r34);
+		RailView vr34 = new RailView(320, 450, 24, 80);
+		vr34.setImage("img/rail2.jpg");
+		r34.setView(vr34);
+		vr34.setModel(r34);
+		rails.add(r34);
 
 		
 		Controller.getController().addElement(vEp);
@@ -339,6 +494,23 @@ public class Map {
 		Controller.getController().addElement(vr18);
 		Controller.getController().addElement(vr19);
 		Controller.getController().addElement(vr20);
+		Controller.getController().addElement(vsw4);
+		Controller.getController().addElement(vr21);
+		Controller.getController().addElement(vr22);
+		Controller.getController().addElement(vr23);
+		Controller.getController().addElement(vr24);
+		Controller.getController().addElement(vcr2);
+		Controller.getController().addElement(vr25);
+		Controller.getController().addElement(vr26);
+		Controller.getController().addElement(vr27);
+		Controller.getController().addElement(vr28);
+		Controller.getController().addElement(vr29);
+		Controller.getController().addElement(vsw5);
+		Controller.getController().addElement(vr30);
+		Controller.getController().addElement(vr31);
+		Controller.getController().addElement(vr32);
+		Controller.getController().addElement(vr33);
+		Controller.getController().addElement(vr34);
 	}
 	
 	/**
