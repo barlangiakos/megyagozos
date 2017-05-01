@@ -238,6 +238,32 @@ public class Map {
 		voffgreen.setImage("img/greenstation.jpg");
 		offgreen.setView(voffgreen);
 		offStations.add(offgreen);
+		
+		Switch sw3 = new Switch("sw3");
+		sw3.setRail1(r14);
+		r14.setRail2(sw3);
+		SwitchView vsw3 = new SwitchView(710, 210, 80, 80, sw3, "img/switch82.jpg", "img/switch81.jpg");
+		sw3.setView(vsw3);
+		switches.add(sw3);
+		
+		TunnelSpace ts1 = new TunnelSpace("ts1");
+		ts1.setRail1(sw3);
+		sw3.setRail2(ts1);
+		sw3.addRail(ts1);
+		TunnelSpaceView vts1 = new TunnelSpaceView(790,210,80,24);
+		vts1.setImage("img/tsNotBuilt.jpg");
+		ts1.setView(vts1);
+		vts1.setModel(ts1);
+		tunnelSpaces.add(ts1);
+		
+		Rail r15 = new Rail("r15");
+		r15.setRail1(sw3);
+		sw3.addRail(r15);;
+		RailView vr15 = new RailView(766, 290, 24, 80);
+		vr15.setImage("img/rail2.jpg");
+		r15.setView(vr15);
+		vr15.setModel(r15);
+		rails.add(r15);
 
 		
 		Controller.getController().addElement(vEp);
@@ -260,6 +286,9 @@ public class Map {
 		Controller.getController().addElement(vr13);
 		Controller.getController().addElement(vr14);
 		Controller.getController().addElement(voffgreen);
+		Controller.getController().addElement(vsw3);
+		Controller.getController().addElement(vts1);
+		Controller.getController().addElement(vr15);
 	}
 	
 	/**
