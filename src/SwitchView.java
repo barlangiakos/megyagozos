@@ -48,11 +48,13 @@ public class SwitchView extends ElementView implements MouseListener{
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		if(((JLabel)e.getSource()).equals(this)){
-			this.mSwitch.changeRail();
-			setIcon(new ImageIcon(switchImages.get(++index)));
-			if(index == 1) index = -1;
-			getParent().repaint();
-			getParent().revalidate();
+			if(mSwitch.getWagon() == null){
+				this.mSwitch.changeRail();
+				setIcon(new ImageIcon(switchImages.get(++index)));
+				if(index == 1) index = -1;
+				getParent().repaint();
+				getParent().revalidate();
+			}
 		}
 	}
 

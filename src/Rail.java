@@ -102,4 +102,8 @@ public class Rail {
 	public void setView(ElementView rv){
 		rView = rv;
 	}
+	
+	public Wagon getWagon(){
+		return wagon;
+	}
 }
