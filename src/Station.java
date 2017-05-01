@@ -35,4 +35,8 @@ abstract public class Station {
 	public StationView getView(){
 		return sView;
 	}
+	
+	public void setView(StationView v){
+		sView = v;
+	}
 }

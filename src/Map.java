@@ -205,6 +205,41 @@ public class Map {
 		vr11.setModel(r11);
 		rails.add(r11);
 		
+		Rail r12 = new Rail("r12");
+		r12.setRail1(r9);
+		r9.setRail2(r12);
+		RailView vr12 = new RailView(470, 210, 80, 24);
+		vr12.setImage("img/rail.jpg");
+		r12.setView(vr12);
+		vr12.setModel(r12);
+		rails.add(r12);
+		
+		Rail r13 = new Rail("r13");
+		r13.setRail1(r12);
+		r12.setRail2(r13);
+		RailView vr13 = new RailView(550, 210, 80, 24);
+		vr13.setImage("img/rail.jpg");
+		r13.setView(vr13);
+		vr13.setModel(r13);
+		rails.add(r13);
+		
+		Rail r14 = new Rail("r14");
+		r14.setRail1(r13);
+		r13.setRail2(r14);
+		RailView vr14 = new RailView(630, 210, 80, 24);
+		vr14.setImage("img/rail.jpg");
+		r14.setView(vr14);
+		vr14.setModel(r14);
+		rails.add(r14);
+		
+		OffStation offgreen = new OffStation("offgreen", "green");
+		r12.setStation(offgreen);
+		StationView voffgreen = new StationView(470,186,80,23);
+		voffgreen.setImage("img/greenstation.jpg");
+		offgreen.setView(voffgreen);
+		offStations.add(offgreen);
+
+		
 		Controller.getController().addElement(vEp);
 		Controller.getController().addElement(vr1);
 		Controller.getController().addElement(vr2);
@@ -221,6 +256,10 @@ public class Map {
 		Controller.getController().addElement(vsw2);
 		Controller.getController().addElement(vEp2);
 		Controller.getController().addElement(vr11);
+		Controller.getController().addElement(vr12);
+		Controller.getController().addElement(vr13);
+		Controller.getController().addElement(vr14);
+		Controller.getController().addElement(voffgreen);
 	}
 	
 	/**
