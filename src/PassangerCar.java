@@ -107,4 +107,8 @@ public class PassangerCar extends Wagon {
 	public String getColor(){
 		return color;
 	}
+	
+	public boolean isEmpty(){
+		return empty;
+	}
 }
