@@ -6,6 +6,7 @@
 public class Timer implements Runnable{
 	private Thread t;
 	private String threadName;
+	private boolean running = true;
 	/**
 	 * Konstruktor.   
 	 * @param name Az új szál neve.
@@ -18,7 +19,7 @@ public class Timer implements Runnable{
 	 */
 	public void run() {
 	   try {
-	      while(true){
+	      while(running){
 	    	 Controller.getController().tick();
 	         Thread.sleep(1000);
 	      }
@@ -34,5 +35,9 @@ public class Timer implements Runnable{
 	      t = new Thread (this, threadName);
 	      t.start ();
 	   }
+	}
+	
+	public void cancel(){
+		running = false;;
 	}
 }

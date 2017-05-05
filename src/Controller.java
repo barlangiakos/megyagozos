@@ -1,6 +1,10 @@
 import java.io.*;
 import java.util.*;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 /**
  * Biztosítja, hogy a felhasználó be tudjon avatkozni a játék menetébe: tudja állítani a váltókat, tudjon alagút szájakat építeni/lebontani.
  * Ezen kívül képes a vonatok mozgatásának kezdeményezésére, új vonat behozására, valamint a játék végének ellenõrzésére (Singleton osztály).
@@ -19,6 +23,7 @@ public class Controller {
 	int wincount = 0;
 	int traincount = 0;
 	private Views views;
+	private Timer t = new Timer("Timerthread");
 	/**
 	 * Konstruktor. Inicializálja a Controllert.
 	 */
@@ -95,7 +100,15 @@ public class Controller {
 	 * Vonatok ütközése esetén a vereséget kezeli (leáll az alkalmazás).
 	 */
 	public void lose(){
-		System.exit(0);
+		//System.exit(0);
+		t.cancel();
+		JFrame frame = new JFrame();
+		frame.setSize(900, 720);
+		frame.add(new JLabel(new ImageIcon("img/lz.jpg")));
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		views.close();
+		
 	};
 	/**
 	 * Olvassa a bemenetet a standard inputról. A bemenet függvényében hív meg további metódusokat.
@@ -257,7 +270,6 @@ public class Controller {
 	}
 	
 	public void startTimer(){
-		Timer t = new Timer("Timerthread");
 		t.start();
 	}
 }

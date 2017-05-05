@@ -21,6 +21,7 @@ public class Views extends JFrame{
 		setLocation(dimemsion.width/2-this.getSize().width/2, dimemsion.height/2-this.getSize().height/2);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
+		setResizable(false);
 		mainPanel.setVisible(true);
 	}
 	
@@ -34,5 +35,9 @@ public class Views extends JFrame{
 	public void drawAll(){
 		repaint();
 		revalidate();
+	}
+	
+	public void close(){
+		this.dispose();
 	}
 }

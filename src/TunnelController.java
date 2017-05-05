@@ -75,6 +75,17 @@ public class TunnelController {
 			tunnelRail1.setRail2(tunnelRail2);
 			tunnelRail2.setRail1(tunnelRail1);
 			tunnelRail2.setRail2(t2);
+			
+			RailView vtr1 = new RailView(1920, 1080, 80, 24);
+			vtr1.setImage("img/rail.jpg");
+			tunnelRail1.setView(vtr1);
+			vtr1.setModel(tunnelRail1);
+			
+			RailView vtr2 = new RailView(1920, 1080, 80, 24);
+			vtr2.setImage("img/rail.jpg");
+			tunnelRail2.setView(vtr2);
+			vtr2.setModel(tunnelRail2);
+			
 			System.out.println(t.getId() + " built.");
 			System.out.println("Tunnel created between " + t1.getId() + " and " + t2.getId() + ".");
 		}
