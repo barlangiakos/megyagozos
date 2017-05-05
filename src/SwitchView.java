@@ -29,12 +29,6 @@ public class SwitchView extends ElementView implements MouseListener{
 		}
 		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	public void setModel(Switch s){
 		mSwitch = s;

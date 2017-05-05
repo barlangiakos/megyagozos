@@ -16,12 +16,6 @@ public class TunnelSpaceView extends ElementView implements MouseListener{
 		
 		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	public void setModel(TunnelSpace ts){
 		mTunnelSpace = ts;

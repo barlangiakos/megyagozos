@@ -6,12 +6,6 @@ public class PassengerCarView extends ElementView{
 		mPc = model;
 		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	public void setX(int x){
 		if (x > xCoord && !mPc.isEmpty()){

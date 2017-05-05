@@ -54,5 +54,4 @@ public abstract class ElementView extends JLabel{
 		}
 	}
 	
-	public abstract void update();
 }

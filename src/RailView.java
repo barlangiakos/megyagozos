@@ -6,12 +6,6 @@ public class RailView extends ElementView{
 		super(x, y, w, h);
 		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	public void setModel(Rail r){
 		mRail = r;
