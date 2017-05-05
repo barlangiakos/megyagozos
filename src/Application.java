@@ -19,7 +19,7 @@ public class Application {
 		StartScreen.startButton.addActionListener(e -> {
             StartScreen.dispose();
             Controller.getController().createMap();
-            Controller.getController().startTimer();
+            //Controller.getController().startTimer();
         });
 
 		StartScreen.exitButton.addActionListener(e -> {
