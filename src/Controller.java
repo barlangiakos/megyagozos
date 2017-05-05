@@ -24,6 +24,7 @@ public class Controller {
 	int traincount = 0;
 	private Views views;
 	private Timer t = new Timer("Timerthread");
+	private JFrame frame;
 	/**
 	 * Konstruktor. Inicializálja a Controllert.
 	 */
@@ -35,6 +36,11 @@ public class Controller {
 		trainTime = 2;
 		level = 1;
 		views = new Views();
+		
+		frame = new JFrame();
+		frame.setSize(900, 720);
+		frame.add(new JLabel(new ImageIcon("img/lz.jpg")));
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	public void createMap(){
@@ -102,11 +108,7 @@ public class Controller {
 	public void lose(){
 		//System.exit(0);
 		t.cancel();
-		JFrame frame = new JFrame();
-		frame.setSize(900, 720);
-		frame.add(new JLabel(new ImageIcon("img/lz.jpg")));
 		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		views.close();
 		
 	};
