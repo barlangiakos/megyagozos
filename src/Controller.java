@@ -70,9 +70,10 @@ public class Controller {
 		}
 		
 		trainTime--;
-		if(trainTime == 0 && traincount <= (level*2)){
+		if(trainTime == 0 && traincount < (level*2)){
 			locomotives.add(map.generateTrain(latest++));
 			trainTime = 30;
+			traincount++;
 		}
 		
 	};

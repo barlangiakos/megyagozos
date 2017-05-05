@@ -503,6 +503,8 @@ public class Map {
 		rails.add(r39);
 		
 		TunnelSpace ts2 = new TunnelSpace("ts2");
+		ts2.setRail1(r39);
+		r39.setRail2(ts2);
 		TunnelSpaceView vts2 = new TunnelSpaceView(474,666,80,24);
 		vts2.setImage("img/tsNotBuilt.jpg");
 		ts2.setView(vts2);
@@ -510,8 +512,8 @@ public class Map {
 		tunnelSpaces.add(ts2);
 		
 		Rail r40 = new Rail("r40");
-		r40.setRail1(r39);
-		r39.setRail2(r40);
+		r40.setRail1(ts2);
+		ts2.setRail2(r40);
 		RailView vr40 = new RailView(554, 666, 80, 24);
 		vr40.setImage("img/rail.jpg");
 		r40.setView(vr40);
@@ -529,6 +531,7 @@ public class Map {
 		
 		Switch sw6 = new Switch("sw6");
 		sw6.setRail1(r41);
+		r41.setRail2(sw6);
 		SwitchView vsw6 = new SwitchView(714, 610, 80, 80, sw6, "img/switch32.jpg", "img/switch31.jpg");
 		sw6.setView(vsw6);
 		switches.add(sw6);
