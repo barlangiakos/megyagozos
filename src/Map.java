@@ -612,6 +612,20 @@ public class Map {
 		r50.setView(vr50);
 		vr50.setModel(r50);
 		rails.add(r50);
+		
+		OffStation offred = new OffStation("offred", "red");
+		r26.setStation(offred);
+		StationView voffred = new StationView(450,266,80,23);
+		voffred.setImage("img/redstation.jpg");
+		offred.setView(voffred);
+		offStations.add(offred);
+		
+		OffStation offblue = new OffStation("offblue", "blue");
+		r23.setStation(offblue);
+		StationView voffblue = new StationView(904,346,80,23);
+		voffblue.setImage("img/bluestation.jpg");
+		offblue.setView(voffblue);
+		offStations.add(offblue);
 
 		
 		Controller.getController().addElement(vEp);
@@ -675,6 +689,8 @@ public class Map {
 		Controller.getController().addElement(vr47);
 		Controller.getController().addElement(vr49);
 		Controller.getController().addElement(vr50);
+		Controller.getController().addElement(voffred);
+		Controller.getController().addElement(voffblue);
 	}
 	
 	/**

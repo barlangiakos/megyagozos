@@ -25,6 +25,7 @@ public class Controller {
 	private Views views;
 	private Timer t = new Timer("Timerthread");
 	private JFrame frame;
+	private JFrame win;
 	/**
 	 * Konstruktor. Inicializálja a Controllert.
 	 */
@@ -41,6 +42,11 @@ public class Controller {
 		frame.setSize(900, 720);
 		frame.add(new JLabel(new ImageIcon("img/lz.jpg")));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		win = new JFrame();
+		win.setSize(900, 720);
+		win.add(new JLabel(new ImageIcon("img/win.jpg")));
+		win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	public void createMap(){
@@ -77,6 +83,9 @@ public class Controller {
 		
 		if (wincount == (level*2)){
 			System.out.println("You won!");
+			t.cancel();
+			win.setVisible(true);
+			views.close();
 			return;
 		}
 		
