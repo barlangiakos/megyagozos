@@ -275,11 +275,16 @@ public class Controller {
 		}
 		return null;
 	}
-	
+	/**
+	 * Új kirajzolható elemet add hozáá a nézethez.
+	 * @param ev Az új elem.
+	 */
 	public void addElement(ElementView ev){
 		views.addElement(ev);
 	}
-	
+	/**
+	 * Elindítja az idõzítõt
+	 */
 	public void startTimer(){
 		t.start();
 	}

@@ -7,11 +7,11 @@
  */
 
 public class CoalWagon extends Wagon{
+	private CoalWagonView cwView;
 	/**
 	 * Konstruktor
 	 * @param id A beállítandó id.
 	 */
-	private CoalWagonView cwView;
 	public CoalWagon(String id){
 		this.id = id;
 		currentRail = null;
@@ -77,7 +77,10 @@ public class CoalWagon extends Wagon{
 	public void setCurrentRail(Rail r){
 		currentRail = r;
 	}
-	
+	/**
+	 * cwView setter
+	 * @param cwv A cwView új értéke.
+	 */
 	public void setView(CoalWagonView cwv){
 		cwView = cwv;
 	}

@@ -32,10 +32,17 @@ abstract public class Station {
 	 */
 	abstract public boolean arrive(String color, Wagon w);
 	
+	/**
+	 * sView getter
+	 * @return sView
+	 */
 	public StationView getView(){
 		return sView;
 	}
-	
+	/**
+	 * sView setter
+	 * @param v sView új értéke
+	 */
 	public void setView(StationView v){
 		sView = v;
 	}

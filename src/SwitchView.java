@@ -8,12 +8,25 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-
+/**
+ * A váltó nézetéért felelõs osztály, kirajzolja a képét egy megadott pozícióra.
+ * @author Tajti
+ *
+ */
 public class SwitchView extends ElementView implements MouseListener{
 	private Switch mSwitch;
 	private ArrayList<Image> switchImages;
 	private int index = 0;
-	
+	/**
+	 * konstruktor
+	 * @param x x pozíció
+	 * @param y y pozíció
+	 * @param w szélesség
+	 * @param h magasság
+	 * @param s modellbeli váltó
+	 * @param image1 elsõ álláshoz tartozó kép
+	 * @param image2 második álláshoz tartozó kép
+	 */
 	public SwitchView(int x, int y, int w, int h, Switch s, String image1, String image2) {
 		super(x, y, w, h);
 		mSwitch = s;
@@ -29,15 +42,23 @@ public class SwitchView extends ElementView implements MouseListener{
 		}
 		// TODO Auto-generated constructor stub
 	}
-	
+	/**
+	 * mSwitch setter
+	 * @param s mSwitch új értéke
+	 */
 	public void setModel(Switch s){
 		mSwitch = s;
 	}
-	
+	/**
+	 * mSwitch getter
+	 * @return mSwitch
+	 */
 	public Switch getModel(){
 		return mSwitch;
 	}
-
+	/**
+	 * Az egérkettintás eseménykezelõje
+	 */
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -51,7 +72,7 @@ public class SwitchView extends ElementView implements MouseListener{
 			}
 		}
 	}
-
+	
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub

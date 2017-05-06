@@ -94,15 +94,24 @@ public class Rail {
 	public void setWagon(Wagon w){
 		wagon = w;
 	}
-	
+	/**
+	 * rView getter
+	 * @return rView
+	 */
 	public ElementView getView(){
 		return rView;
 	}
-	
+	/**
+	 * rView setter
+	 * @param rv rView új értéke
+	 */
 	public void setView(ElementView rv){
 		rView = rv;
 	}
-	
+	/**
+	 * A sínen tartózkodó vonatot adja vissza (vagy null)
+	 * @return wagon
+	 */
 	public Wagon getWagon(){
 		return wagon;
 	}

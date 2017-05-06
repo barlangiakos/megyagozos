@@ -91,22 +91,34 @@ public class PassangerCar extends Wagon {
 	public void setCurrentRail(Rail r){
 		currentRail = r;
 	}
-	
+	/**
+	 * pcView setter
+	 * @param pcv pcView új értéke
+	 */
 	public void setView(PassengerCarView pcv){
 		pcView = pcv;
 	}
-	
+	/**
+	 * empty setter
+	 * @param b A beállítandó érték
+	 */
 	public void setEmpty(boolean b) {
 		empty = b;
 		if (!b){
 			pcView.setImage("img/" + color + "pc.jpg");
 		}
 	}
-	
+	/**
+	 * color getter
+	 * @return color
+	 */
 	public String getColor(){
 		return color;
 	}
-	
+	/**
+	 * empty getter
+	 * @return empty
+	 */
 	public boolean isEmpty(){
 		return empty;
 	}

@@ -92,7 +92,10 @@ public class Locomotiv extends Wagon {
 	public boolean getWin(){
 		return win;
 	}
-	
+	/**
+	 * lView setter
+	 * @param l lView új értéke.
+	 */
 	public void setView(LocomotivView l){
 		lView = l;
 	}

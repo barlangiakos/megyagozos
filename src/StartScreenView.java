@@ -1,6 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * A kezdõképernyõ
+ * @author Tajti
+ *
+ */
 public class StartScreenView extends JFrame{
 
     private static final int WIDTH = 900;

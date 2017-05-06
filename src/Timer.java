@@ -36,7 +36,9 @@ public class Timer implements Runnable{
 	      t.start ();
 	   }
 	}
-	
+	/**
+	 * leállítja a timert
+	 */
 	public void cancel(){
 		running = false;;
 	}

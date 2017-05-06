@@ -63,7 +63,10 @@ public class Map {
 			counter++;
 		return l;
 	}
-	
+	/**
+	 * hard-kódolt pálya felépítése itt történik
+	 * viewk létrehozása+modellbeli sínek, állomások létrehozása
+	 */
 	public void create(){
 		EntryPoint ep = new EntryPoint("ep");
 		entryPoints.add(ep);
